@@ -35,9 +35,9 @@
             this.textBox_SQLQUERY = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label_count = new System.Windows.Forms.Label();
             this.dataGridView_documentsRang = new System.Windows.Forms.DataGridView();
             this.buttonback = new System.Windows.Forms.Button();
+            this.label_count = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_documentsRang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,9 +65,10 @@
             // radiobuttonAND
             // 
             this.radiobuttonAND.AutoSize = true;
+            this.radiobuttonAND.Font = new System.Drawing.Font("Ravie", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radiobuttonAND.Location = new System.Drawing.Point(704, 77);
             this.radiobuttonAND.Name = "radiobuttonAND";
-            this.radiobuttonAND.Size = new System.Drawing.Size(48, 17);
+            this.radiobuttonAND.Size = new System.Drawing.Size(67, 25);
             this.radiobuttonAND.TabIndex = 2;
             this.radiobuttonAND.TabStop = true;
             this.radiobuttonAND.Text = "AND";
@@ -76,9 +77,10 @@
             // radiobuttonOR
             // 
             this.radiobuttonOR.AutoSize = true;
+            this.radiobuttonOR.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radiobuttonOR.Location = new System.Drawing.Point(872, 77);
             this.radiobuttonOR.Name = "radiobuttonOR";
-            this.radiobuttonOR.Size = new System.Drawing.Size(41, 17);
+            this.radiobuttonOR.Size = new System.Drawing.Size(58, 26);
             this.radiobuttonOR.TabIndex = 3;
             this.radiobuttonOR.TabStop = true;
             this.radiobuttonOR.Text = "OR";
@@ -95,29 +97,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(674, 126);
+            this.label1.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(624, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.Size = new System.Drawing.Size(128, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "SQL QUERY";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(833, 368);
+            this.label2.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(409, 359);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 13);
+            this.label2.Size = new System.Drawing.Size(377, 22);
             this.label2.TabIndex = 6;
             this.label2.Text = "NUMBER OF DOCUMENTS RECEIVED";
-            // 
-            // label_count
-            // 
-            this.label_count.AutoSize = true;
-            this.label_count.Location = new System.Drawing.Point(1103, 368);
-            this.label_count.Name = "label_count";
-            this.label_count.Size = new System.Drawing.Size(35, 13);
-            this.label_count.TabIndex = 7;
-            this.label_count.Text = "label3";
             // 
             // dataGridView_documentsRang
             // 
@@ -137,14 +132,23 @@
             this.buttonback.UseVisualStyleBackColor = true;
             this.buttonback.Click += new System.EventHandler(this.buttonback_Click);
             // 
+            // label_count
+            // 
+            this.label_count.AutoSize = true;
+            this.label_count.Location = new System.Drawing.Point(811, 366);
+            this.label_count.Name = "label_count";
+            this.label_count.Size = new System.Drawing.Size(49, 13);
+            this.label_count.TabIndex = 10;
+            this.label_count.Text = "_______";
+            // 
             // Form_SEARCH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 750);
+            this.Controls.Add(this.label_count);
             this.Controls.Add(this.buttonback);
             this.Controls.Add(this.dataGridView_documentsRang);
-            this.Controls.Add(this.label_count);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_SQLQUERY);
@@ -170,8 +174,8 @@
         private System.Windows.Forms.TextBox textBox_SQLQUERY;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label_count;
         private System.Windows.Forms.DataGridView dataGridView_documentsRang;
         private System.Windows.Forms.Button buttonback;
+        private System.Windows.Forms.Label label_count;
     }
 }

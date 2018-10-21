@@ -101,6 +101,7 @@
             this.button_analisys.TabIndex = 6;
             this.button_analisys.Text = "ANALISYS";
             this.button_analisys.UseVisualStyleBackColor = true;
+            this.button_analisys.Click += new System.EventHandler(this.button_analisys_Click);
             // 
             // allmovies_button
             // 

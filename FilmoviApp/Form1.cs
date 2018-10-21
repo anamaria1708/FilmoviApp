@@ -67,5 +67,14 @@ namespace FilmoviApp
             this.Show();
 
         }
+
+        private void button_analisys_Click(object sender, EventArgs e)
+        {
+            Form_ANALIZA form = new Form_ANALIZA();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+
+        }
     }
 }

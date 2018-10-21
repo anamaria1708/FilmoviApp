@@ -19,6 +19,11 @@ namespace FilmoviApp
         public Form_ADD()
         {
             InitializeComponent();
+
+            this.BackgroundImage = Properties.Resources.backgorundd_picture;
+            this.FormBorderStyle = FormBorderStyle.None; //remove any border
+            //this.TopMost = true;                        //Bring the form to the front
+            this.Bounds = Screen.PrimaryScreen.Bounds;  //Make it fulscreen
         }
 
         private void Form_ADD_Load(object sender, EventArgs e)

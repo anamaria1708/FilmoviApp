@@ -17,6 +17,7 @@ namespace FilmoviApp
     public partial class Form_SEARCH : Form
     {
         private DataSet ds = new DataSet(); //podaci o kojoj tablici i podatke iz te tablice..
+        private DataSet ds2 = new DataSet();
         private DataTable dt = new DataTable(); //klasa tablica
         string operacija;
         public Form_SEARCH()
@@ -24,13 +25,8 @@ namespace FilmoviApp
             InitializeComponent();
 
             this.BackgroundImage = Properties.Resources.backgorundd_picture;
-            // player.URL = "musicmp3.mp3";
-            // player.controls.play();
-           
-
-
-            //this.FormBorderStyle = FormBorderStyle.None; //remove any border
-            //this.TopMost = true;                        //Bring the form to the front
+            this.FormBorderStyle = FormBorderStyle.None; //remove any border
+           // this.TopMost = true;                        //Bring the form to the front
             this.Bounds = Screen.PrimaryScreen.Bounds;  //Make it fulscreen
 
         }
@@ -197,8 +193,8 @@ namespace FilmoviApp
                 string connectionstring;
                 Form2.GetConnection(out connection, out connectionstring);
                 string sql = String.Format("SELECT m.movieid, m.title," +
-                    " ts_headline(m.title, to_tsquery('english', '{0}')) AS \"TITLE\"," +
-                    " ts_headline(m.description, to_tsquery('english', '{0}')) AS \"DESCRIPTION\", " +
+                    " ts_headline(m.title, to_tsquery('english', '{0}')) AS \"PODEBLJANI NASLOV\"," +
+                    " ts_headline(m.description, to_tsquery('english', '{0}')) AS \"PODEBLJANI DESCRIPTION\", " +
                     "m.description, " +
                     "ts_rank(m.sumtsvector, to_tsquery('english', '{0}'), 1) AS \"RANG\"" +
                     "\r\nFROM movie AS m\r\n" +
@@ -217,6 +213,7 @@ namespace FilmoviApp
 
                 dataGridView_documentsRang.DataSource = dt; //.DataSource je izvor podataka za taj je u dt
                 dataGridView_documentsRang.Columns["movieid"].Visible = false;
+                dataGridView_documentsRang.Columns["description"].Visible = false;
 
                 label_count.Text = dt.Rows.Count.ToString();
 
@@ -226,9 +223,9 @@ namespace FilmoviApp
 
                 da = new NpgsqlDataAdapter(sql2, connectionstring); //PRICA S BAZOM
 
-                ds.Reset(); // data set ono sta vrati baza, tj pomocu da to spremimo u ds (mozemo imat i vise tablica za vratit (union)
-                da.Fill(ds); //data adapter napuni data set
-
+                ds2.Reset(); // treba nam drui jer ako resetam prvi izgubit cu podatke koji su se prikazali
+                da.Fill(ds2); //data adapter napuni data set
+            
 
             }
             catch (Exception k)
