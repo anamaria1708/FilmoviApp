@@ -73,9 +73,13 @@ namespace FilmoviApp
             {
                 connection.Close();
                 MessageBox.Show("Uspjesno dodan film :) ");
-            
+                titlebox.ResetText();
+                categoriesbox.ResetText();
+                summarybox.ResetText();
+                descriptionbox.ResetText();
 
-        }
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
