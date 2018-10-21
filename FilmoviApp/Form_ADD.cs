@@ -60,6 +60,7 @@ namespace FilmoviApp
 
                 ds.Reset();
                 da.Fill(ds);
+
                 //dt = ds.Tables[0];
 
             }
@@ -71,8 +72,10 @@ namespace FilmoviApp
             finally
             {
                 connection.Close();
+                MessageBox.Show("Uspjesno dodan film :) ");
+            
 
-            }
+        }
         }
 
         private void button2_Click(object sender, EventArgs e)
