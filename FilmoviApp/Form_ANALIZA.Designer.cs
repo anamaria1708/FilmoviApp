@@ -33,10 +33,8 @@
             this.npgsqlDataAdapter1 = new Npgsql.NpgsqlDataAdapter();
             this.npgsqlDataAdapter2 = new Npgsql.NpgsqlDataAdapter();
             this.dateTimePickerDAYFINISH = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerDAY = new System.Windows.Forms.DateTimePicker();
             this.labelDAYSTART = new System.Windows.Forms.Label();
             this.labelDAYFINISH = new System.Windows.Forms.Label();
-            this.labelDAY = new System.Windows.Forms.Label();
             this.radioButtonPOSATIMA = new System.Windows.Forms.RadioButton();
             this.radioButtonPODANIMA = new System.Windows.Forms.RadioButton();
             this.analizaGrid = new System.Windows.Forms.DataGridView();
@@ -70,17 +68,10 @@
             // 
             // dateTimePickerDAYFINISH
             // 
-            this.dateTimePickerDAYFINISH.Location = new System.Drawing.Point(748, 82);
+            this.dateTimePickerDAYFINISH.Location = new System.Drawing.Point(748, 105);
             this.dateTimePickerDAYFINISH.Name = "dateTimePickerDAYFINISH";
             this.dateTimePickerDAYFINISH.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerDAYFINISH.TabIndex = 1;
-            // 
-            // dateTimePickerDAY
-            // 
-            this.dateTimePickerDAY.Location = new System.Drawing.Point(748, 161);
-            this.dateTimePickerDAY.Name = "dateTimePickerDAY";
-            this.dateTimePickerDAY.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerDAY.TabIndex = 2;
             // 
             // labelDAYSTART
             // 
@@ -96,21 +87,11 @@
             // 
             this.labelDAYFINISH.AutoSize = true;
             this.labelDAYFINISH.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDAYFINISH.Location = new System.Drawing.Point(599, 82);
+            this.labelDAYFINISH.Location = new System.Drawing.Point(599, 103);
             this.labelDAYFINISH.Name = "labelDAYFINISH";
             this.labelDAYFINISH.Size = new System.Drawing.Size(127, 22);
             this.labelDAYFINISH.TabIndex = 4;
             this.labelDAYFINISH.Text = "DAY FINISH";
-            // 
-            // labelDAY
-            // 
-            this.labelDAY.AutoSize = true;
-            this.labelDAY.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDAY.Location = new System.Drawing.Point(634, 161);
-            this.labelDAY.Name = "labelDAY";
-            this.labelDAY.Size = new System.Drawing.Size(59, 22);
-            this.labelDAY.TabIndex = 5;
-            this.labelDAY.Text = "DAY ";
             // 
             // radioButtonPOSATIMA
             // 
@@ -124,21 +105,21 @@
             this.radioButtonPOSATIMA.TabStop = true;
             this.radioButtonPOSATIMA.Text = "HOURS";
             this.radioButtonPOSATIMA.UseVisualStyleBackColor = true;
-            this.radioButtonPOSATIMA.CheckedChanged += new System.EventHandler(this.radioButtonPOSATIMA_CheckedChanged);
+           
             // 
             // radioButtonPODANIMA
             // 
             this.radioButtonPODANIMA.AutoSize = true;
             this.radioButtonPODANIMA.Font = new System.Drawing.Font("Ravie", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonPODANIMA.ForeColor = System.Drawing.Color.DarkRed;
-            this.radioButtonPODANIMA.Location = new System.Drawing.Point(406, 44);
+            this.radioButtonPODANIMA.Location = new System.Drawing.Point(406, 43);
             this.radioButtonPODANIMA.Name = "radioButtonPODANIMA";
             this.radioButtonPODANIMA.Size = new System.Drawing.Size(116, 38);
             this.radioButtonPODANIMA.TabIndex = 7;
             this.radioButtonPODANIMA.TabStop = true;
             this.radioButtonPODANIMA.Text = "DAYS";
             this.radioButtonPODANIMA.UseVisualStyleBackColor = true;
-            this.radioButtonPODANIMA.CheckedChanged += new System.EventHandler(this.radioButtonPODANIMA_CheckedChanged);
+            
             // 
             // analizaGrid
             // 
@@ -151,9 +132,9 @@
             // buttonANALIZIRAJ
             // 
             this.buttonANALIZIRAJ.Font = new System.Drawing.Font("Ravie", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonANALIZIRAJ.Location = new System.Drawing.Point(1040, 91);
+            this.buttonANALIZIRAJ.Location = new System.Drawing.Point(794, 179);
             this.buttonANALIZIRAJ.Name = "buttonANALIZIRAJ";
-            this.buttonANALIZIRAJ.Size = new System.Drawing.Size(120, 31);
+            this.buttonANALIZIRAJ.Size = new System.Drawing.Size(154, 73);
             this.buttonANALIZIRAJ.TabIndex = 10;
             this.buttonANALIZIRAJ.Text = "ANALIZE";
             this.buttonANALIZIRAJ.UseVisualStyleBackColor = true;
@@ -183,10 +164,8 @@
             this.Controls.Add(this.analizaGrid);
             this.Controls.Add(this.radioButtonPODANIMA);
             this.Controls.Add(this.radioButtonPOSATIMA);
-            this.Controls.Add(this.labelDAY);
             this.Controls.Add(this.labelDAYFINISH);
             this.Controls.Add(this.labelDAYSTART);
-            this.Controls.Add(this.dateTimePickerDAY);
             this.Controls.Add(this.dateTimePickerDAYFINISH);
             this.Controls.Add(this.dateTimePickerDAYSTART);
             this.Name = "Form_ANALIZA";
@@ -205,10 +184,8 @@
         private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
         private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter2;
         private System.Windows.Forms.DateTimePicker dateTimePickerDAYFINISH;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDAY;
         private System.Windows.Forms.Label labelDAYSTART;
         private System.Windows.Forms.Label labelDAYFINISH;
-        private System.Windows.Forms.Label labelDAY;
         private System.Windows.Forms.RadioButton radioButtonPOSATIMA;
         private System.Windows.Forms.RadioButton radioButtonPODANIMA;
         private System.Windows.Forms.DataGridView analizaGrid;

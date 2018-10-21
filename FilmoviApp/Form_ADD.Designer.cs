@@ -96,7 +96,7 @@
             // 
             this.descriptionbox.Location = new System.Drawing.Point(755, 295);
             this.descriptionbox.Name = "descriptionbox";
-            this.descriptionbox.Size = new System.Drawing.Size(100, 20);
+            this.descriptionbox.Size = new System.Drawing.Size(193, 20);
             this.descriptionbox.TabIndex = 6;
             // 
             // labeldescription
